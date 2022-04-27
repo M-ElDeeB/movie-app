@@ -1,0 +1,14 @@
+.navbar {
+  box-shadow: 0 0 5px 1px #fff;
+  background-color: #131722
+}
+
+.searchIcon {
+  cursor: pointer;
+  font-size: 20px;
+  transform: scale(1);
+}
+.searchIcon:hover {
+  transform: scale(1.2);
+  color: #24baef;
+}

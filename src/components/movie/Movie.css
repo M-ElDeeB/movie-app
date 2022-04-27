@@ -1,0 +1,52 @@
+.movie {
+  cursor: pointer;
+  box-shadow: 0 0 5px 1px #fff;
+  border-radius: 7px;
+  height: 390px;
+}
+
+.movie:hover .movie-img {
+  transform: scale(1.1);
+}
+.movie:hover .movie-img {
+  filter: grayscale(0%);
+}
+.movie:hover .star {
+  left: 10px;
+}
+.movie-img {
+  filter: grayscale(60%);
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100%;
+}
+.star {
+  background-color: #eac13b;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: -50%;
+  top: 12%;
+  color: #222;
+  font-weight: bold;
+  font-size: 13px;
+}
+h5 {
+  color: #fff;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0) 110%
+  );
+  padding: 5px;
+}
