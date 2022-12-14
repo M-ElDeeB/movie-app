@@ -31,12 +31,13 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
     let validationResult = validateRegisterForm(user);
+    console.log(validationResult.error.details[0]);
     if (validationResult.error) {
       setIsLoading(false);
       setErrorList(validationResult.error.details);
     } else {
       axios
-        .post("https://route-egypt-api.herokuapp.com/signin", user)
+        .post("https://route-movies-api.vercel.app/signin", user)
         .then((res) => {
           if (res.data.message === "success") {
             setIsLoading(false);
@@ -57,7 +58,7 @@ const Login = () => {
         minDomainSegments: 2,
         tlds: { allow: ["com", "net"] },
       }),
-      password: Joi.string().pattern(/[A-Z][a-z]{3,8}$/),
+      password: Joi.string().pattern(/\w{5,15}/),
     });
     return schema.validate(user, { abortEarly: false });
   };

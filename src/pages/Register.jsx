@@ -36,7 +36,7 @@ const Register = () => {
       setErrorList(validationResult.error.details);
     } else {
       let { data } = await axios.post(
-        "https://route-egypt-api.herokuapp.com/signup",
+        "https://route-movies-api.vercel.app/signup",
         user
       );
 
@@ -59,7 +59,7 @@ const Register = () => {
         minDomainSegments: 2,
         tlds: { allow: ["com", "net"] },
       }),
-      password: Joi.string().pattern(/^[A-Z][a-z]{3,8}$/),
+      password: Joi.string().pattern(/\w{5,15}/),
     });
     return schema.validate(user, { abortEarly: false });
   };
