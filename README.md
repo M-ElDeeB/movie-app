@@ -1,6 +1,6 @@
 # React Movie App
 
-![Website Image](/public/assets/localhost_3000_movies(high quality).png)
+![Website Image](/public/website-img.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
